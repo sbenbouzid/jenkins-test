@@ -19,6 +19,7 @@ pipeline {
 
                 # Load index.html template
                 $template = Get-Content 'Web/index.html' | Out-String
+                """
             }
         }
     }
