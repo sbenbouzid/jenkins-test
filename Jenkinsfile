@@ -20,7 +20,7 @@ pipeline {
                 Install-Module -Name PSMustache -Force
 
                 # Load index.html template
-                $template = Get-Content 'Web/index.html' | Out-String
+                $template2 = Get-Content 'Web/index.html' | Out-String
                 """
             }
         }
