@@ -1,4 +1,6 @@
 pipeline {
+    agent { label 'linux' }
+
     environment {
         ENVIRONMENT = "dev"
     }
