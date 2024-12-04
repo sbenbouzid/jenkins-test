@@ -14,14 +14,14 @@ pipeline {
         }
         stage('Web') {
             steps {
-                powershell '''
+                powershell """
 
                 # Install Mustache templating engine
                 Install-Module -Name PSMustache -Force
 
                 # Load index.html template
                 $template2 = 'Web/index.html'
-                '''
+                """
             }
         }
     }
