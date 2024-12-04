@@ -14,14 +14,6 @@ pipeline {
                 }
             }
         }
-        stage('Pass Variable to PowerShell') {
-            steps {
-                powershell """
-                $jenkinsVar = '${ENVIRONMENT}'
-                Write-Host "The variable from Jenkins is: $jenkinsVar"
-                """
-            }
-        }
         stage('Web') {
             steps {
                 powershell """
@@ -30,7 +22,7 @@ pipeline {
                 Install-Module -Name PSMustache -Force
 
                 # Load index.html template
-                $template2 = 'Web/index.html'
+                \$template2 = 'Web/index.html'
                 """
             }
         }
